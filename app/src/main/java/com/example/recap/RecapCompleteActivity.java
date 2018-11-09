@@ -18,17 +18,21 @@ public class RecapCompleteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_complete);
 
-        // Get the Intent that started this activity and extract the string
+        // Extract the score from the intent
         Intent intent = getIntent();
         String total = intent.getStringExtra("total_score");
 
+        // Set up UI components
+        // Show score
         mTotalScoreView = (TextView) findViewById(R.id.totalScore);
         mTotalScoreView.setText(String.format("%s/70", total));
 
+        // Set progress on progress bar
         mTotalScoreProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         int percentage = 100 * Integer.parseInt(total) / 70;
         mTotalScoreProgressBar.setProgress(percentage);
 
+        // Alter the default size and colour of progress bar
         Drawable progressDrawable = mTotalScoreProgressBar.getProgressDrawable().mutate();
         progressDrawable.setColorFilter(Color.parseColor("#3e5898"), android.graphics.PorterDuff.Mode.SRC_IN);
         mTotalScoreProgressBar.setProgressDrawable(progressDrawable);

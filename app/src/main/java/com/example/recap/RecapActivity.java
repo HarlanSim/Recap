@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class RecapActivity extends AppCompatActivity {
 
     private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
+    
     private TextView mQuestionView;
     private Button mButtonChoice1;
     private Button mButtonChoice2;
@@ -70,15 +71,14 @@ public class RecapActivity extends AppCompatActivity {
         // Add score to total
         mTotalScore += score;
 
-        // Check if this is the final answer
-        // If true, go to Complete screen
-        // Else, next question
+        // If final answer, go to Complete screen
         if(mQuestionLibrary.getQuestionListLength() == mQuestionNumber) {
             Intent intent = new Intent(this, RecapCompleteActivity.class);
             intent.putExtra("total_score", Integer.toString(mTotalScore));
             startActivity(intent);
             finish();
         } else {
+            // Else, next question
             updateQuestion();
         }
     }
