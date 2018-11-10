@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class RecapActivity extends AppCompatActivity {
 
     private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
-    
+
     private TextView mQuestionView;
     private Button mButtonChoice1;
     private Button mButtonChoice2;
@@ -24,7 +24,7 @@ public class RecapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_recap);
 
         mQuestionView = (TextView) findViewById(R.id.question);
         mButtonChoice1 = (Button) findViewById(R.id.answer1);
