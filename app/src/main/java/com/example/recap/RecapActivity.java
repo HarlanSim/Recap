@@ -18,8 +18,11 @@ public class RecapActivity extends AppCompatActivity {
     private Button mButtonChoice4;
     private Button mButtonChoice5;
 
+    private int mAnswers[] = new int[mQuestionLibrary.getQuestionListLength()];
     private int mTotalScore = 0;
     private int mQuestionNumber = 0;
+
+    private Storage mStorage = new Storage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +68,15 @@ public class RecapActivity extends AppCompatActivity {
                 answerClicked(5);
             }
         });
+
+        mStorage.isExternalStorageReadable();
+        mStorage.isExternalStorageWritable();
     }
 
     private void answerClicked(int score) {
+        // Add score to answer array
+        mAnswers[mQuestionNumber-1] = score;
+
         // Add score to total
         mTotalScore += score;
 
@@ -77,8 +86,10 @@ public class RecapActivity extends AppCompatActivity {
             intent.putExtra("total_score", Integer.toString(mTotalScore));
             startActivity(intent);
             finish();
-        } else {
-            // Else, next question
+        }
+
+        // Else, next question
+        else {
             updateQuestion();
         }
     }
