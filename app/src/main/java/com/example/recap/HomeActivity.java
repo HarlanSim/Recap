@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
     private Button mRecapButton;
-    private Button mThreeGoodThingsButton;
+    private Button mAcknowledgmentsButton;
     private Button mCalendarButton;
 
     @Override
@@ -16,33 +16,45 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
-        mRecapButton = (Button) findViewById(R.id.recap_button);
-        mThreeGoodThingsButton = (Button) findViewById(R.id.three_good_things_button);
-        mCalendarButton = (Button) findViewById(R.id.calendar_button);
+        mRecapButton = findViewById(R.id.recap_button);
+        mAcknowledgmentsButton = findViewById(R.id.acknowledgments_button);
+        mCalendarButton = findViewById(R.id.calendar_button);
 
         mRecapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startRecap();
+                startRecapActivity();
             }
         });
 
-        mThreeGoodThingsButton.setOnClickListener(new View.OnClickListener() {
+        mAcknowledgmentsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startThreeGoodThings();
+                startAcknowledgmentsActivity();
+            }
+        });
+        mCalendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startCalendarActivity();
             }
         });
     }
-
-    private void startRecap() {
-        Intent intent = new Intent(this, RecapActivity.class);
-        startActivity(intent);
-    }
-    private void startThreeGoodThings() {
-        Intent intent = new Intent(this, ThreeGoodThingsActivity.class);
+    private void startClassActivity(Class activity){
+        Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
 
+    private void startRecapActivity() {
+        startClassActivity(RecapActivity.class);
+    }
+
+    private void startAcknowledgmentsActivity() {
+        startClassActivity(AcknowledgmentsActivity.class);
+    }
+
+    private void startCalendarActivity() {
+        startClassActivity(CalendarActivity.class);
+    }
 }
 

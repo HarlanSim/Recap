@@ -23,7 +23,7 @@
                 android:paddingRight="100dp"
                 android:paddingBottom="30dp"
                 android:text="❓"
-                android:textSize="20sp"></Button>
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow android:layout_marginBottom="50dp">
@@ -37,12 +37,12 @@
                 android:paddingRight="100dp"
                 android:paddingBottom="30dp"
                 android:text="📅"
-                android:textSize="20sp"></Button>
+                android:textSize="20sp"/>
         </TableRow>
         <TableRow>
 
             <Button
-                android:id="@+id/three_good_things_button"
+                android:id="@+id/acknowledgments_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="100dp"
@@ -50,7 +50,7 @@
                 android:paddingRight="100dp"
                 android:paddingBottom="30dp"
                 android:text="3"
-                android:textSize="20sp"></Button>
+                android:textSize="20sp"/>
         </TableRow>
     </TableLayout>
 
