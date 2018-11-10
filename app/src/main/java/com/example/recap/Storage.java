@@ -24,7 +24,7 @@ public class Storage {
         }
         return file;
     }
-    
+
     public void deleteFile(File file) {
         file.delete();
     }

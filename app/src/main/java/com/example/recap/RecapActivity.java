@@ -68,8 +68,7 @@ public class RecapActivity extends AppCompatActivity {
                 answerClicked(5);
             }
         });
-
-        mStorage.isExternalStorageReadable();
+        
         mStorage.isExternalStorageWritable();
     }
 
