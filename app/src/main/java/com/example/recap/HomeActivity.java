@@ -7,22 +7,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.room.Room;
+
 public class HomeActivity extends AppCompatActivity {
     private Button mRecapButton;
     private Button mAcknowledgmentsButton;
     private Button mCalendarButton;
-    private Storage mStorage = new Storage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
-        // Check if storage is writable, if not display error
-        if(!mStorage.isExternalStorageWritable()){
-            Toast.makeText(HomeActivity.this, "Cannot access storage", Toast.LENGTH_LONG).show();
-        }
-
+        RecapDatabase db = Room.databaseBuilder(getApplicationContext(),
+                RecapDatabase.class, "database").build();
         mRecapButton = findViewById(R.id.recap_button);
         mAcknowledgmentsButton = findViewById(R.id.acknowledgments_button);
         mCalendarButton = findViewById(R.id.calendar_button);

@@ -22,8 +22,6 @@ public class RecapActivity extends AppCompatActivity {
     private int mTotalScore = 0;
     private int mQuestionNumber = 0;
 
-    private Storage mStorage = new Storage();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,8 +66,6 @@ public class RecapActivity extends AppCompatActivity {
                 answerClicked(5);
             }
         });
-        
-        mStorage.isExternalStorageWritable();
     }
 
     private void answerClicked(int score) {
