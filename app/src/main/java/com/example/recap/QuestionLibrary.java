@@ -1,8 +1,8 @@
 package com.example.recap;
 
-public class QuestionLibrary {
+class QuestionLibrary {
 
-    private String mQuestions [] = {
+    private final String mQuestions [] = {
          "I've been feeling optimistic about the future",
          "I've been feeling useful",
          "I've been feeling relaxed",

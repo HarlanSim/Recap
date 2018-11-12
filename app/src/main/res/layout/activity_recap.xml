@@ -17,55 +17,55 @@ android:padding="8dp">
     android:text="I've been feeling optimistic about the future"
     android:textSize="20sp" />
 
-<Button
-    android:id="@+id/answer1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="24dp"
-    android:background="#0091EA"
-    android:textColor="#fff"
-    android:padding="8dp"
-    android:text="1" />
+    <Button
+        android:id="@+id/answerNone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:text="None of the time"
+        android:textColor="#fff" />
 
-<Button
-    android:id="@+id/answer2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="24dp"
-    android:background="#0091EA"
-    android:textColor="#fff"
-    android:padding="8dp"
-    android:text="2" />
+    <Button
+        android:id="@+id/answerRarely"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:text="Rarely"
+        android:textColor="#fff" />
 
-<Button
-    android:id="@+id/answer3"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="24dp"
-    android:background="#0091EA"
-    android:textColor="#fff"
-    android:padding="8dp"
-    android:text="3" />
+    <Button
+        android:id="@+id/answerSometime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:text="Sometime"
+        android:textColor="#fff" />
 
-<Button
-    android:id="@+id/answer4"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="24dp"
-    android:background="#0091EA"
-    android:textColor="#fff"
-    android:padding="8dp"
-    android:text="4" />
+    <Button
+        android:id="@+id/answerOften"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:text="Often"
+        android:textColor="#fff" />
 
-<Button
-    android:id="@+id/answer5"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="24dp"
-    android:background="#0091EA"
-    android:textColor="#fff"
-    android:padding="8dp"
-    android:text="5" />
+    <Button
+        android:id="@+id/answerAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:text="All of the time"
+        android:textColor="#fff" />
 
 
 </LinearLayout>

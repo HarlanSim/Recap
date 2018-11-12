@@ -1,6 +1,4 @@
 package com.example.recap;
-import java.lang.Object;
-import java.sql.Date;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -8,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Recap {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int uid;
 
     @ColumnInfo(name = "answers")
@@ -24,5 +22,5 @@ public class Recap {
     public String acknowledgmentThree;
 
     @ColumnInfo(name = "date")
-    public Date date;
+    public String date;
 }
