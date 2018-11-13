@@ -1,6 +1,6 @@
 # Recap
 
-A simple cognitive therapy quiz Android app which asks you to assess statements based on the experience of your day. It contains an additional exercise where you enter 3 good things from your day into a form. You also have the option to view your past entries in a calendar. Currently is still a work-in-progress.
+A simple cognitive behaviour therapy quiz Android app which asks you to assess statements based on the experience of your day. It contains an additional exercise where you enter 3 good things from your day into a form. You also have the option to view your past entries in a calendar. Currently is still a work-in-progress.
 
 ## Prerequisites
 
