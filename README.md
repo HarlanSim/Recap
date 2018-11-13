@@ -8,7 +8,7 @@ In order to run and build the app, you must install Android Studio https://devel
 
 ## Deployment
 
-To deploy, simply Run-> Run 'app' and deployed to a USB connected Android phone or virtual device.
+To deploy, simply Run-> Run 'app' and deploy to a USB connected Android phone or virtual device.
 
 ## Acknowledgments
 
