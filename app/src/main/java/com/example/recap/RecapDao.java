@@ -14,6 +14,9 @@ public interface RecapDao {
     @Query("SELECT * FROM recap WHERE date = (:date)")
     Recap getFromDate(String date);
 
+    @Query("SELECT * FROM recap WHERE CAST((strftime('%m', date)) AS INTEGER) = :month AND CAST((strftime('%Y', date)) AS INTEGER) = :year")
+    List<Recap> getFromMonth(int month, int year);
+
     @Query("UPDATE recap SET acknowledgment_1 = (:ackOne), acknowledgment_2 = (:ackTwo), " +
             "acknowledgment_3 = (:ackThree) WHERE uid = (:id)")
     void updateRecapWithAcknowledgements(int id, String ackOne, String ackTwo, String ackThree);

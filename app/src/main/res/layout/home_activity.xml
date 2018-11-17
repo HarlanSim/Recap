@@ -22,24 +22,10 @@
                 android:paddingTop="30dp"
                 android:paddingRight="100dp"
                 android:paddingBottom="30dp"
-                android:text="❓"
-                android:textSize="20sp"/>
+                android:text="Quiz " />
         </TableRow>
 
         <TableRow android:layout_marginBottom="50dp">
-
-            <Button
-                android:id="@+id/calendar_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="100dp"
-                android:paddingTop="30dp"
-                android:paddingRight="100dp"
-                android:paddingBottom="30dp"
-                android:text="📅"
-                android:textSize="20sp"/>
-        </TableRow>
-        <TableRow>
 
             <Button
                 android:id="@+id/acknowledgments_button"
@@ -49,9 +35,23 @@
                 android:paddingTop="30dp"
                 android:paddingRight="100dp"
                 android:paddingBottom="30dp"
-                android:text="3"
-                android:textSize="20sp"/>
+                android:text="acknowledgments"
+                android:textSize="14sp" />
         </TableRow>
+
+        <TableRow >
+
+            <Button
+                android:id="@+id/calendar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="100dp"
+                android:paddingTop="30dp"
+                android:paddingRight="100dp"
+                android:paddingBottom="30dp"
+                android:text="📅" />
+        </TableRow>
+
     </TableLayout>
 
 </RelativeLayout>
